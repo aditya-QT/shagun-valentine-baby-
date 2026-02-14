@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vinyl Serenade</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              serif: ['"Playfair Display"', 'Georgia', 'serif'],
+            },
+            animation: {
+              'spin-slow': 'spin 3s linear infinite',
+              'float': 'float 6s ease-in-out infinite',
+              'grow': 'grow 3s ease-out forwards',
+              'fade-in': 'fadeIn 2s ease-out forwards',
+            },
+            keyframes: {
+              float: {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-10px)' },
+              },
+              grow: {
+                '0%': { transform: 'scaleY(0)', opacity: '0' },
+                '100%': { transform: 'scaleY(1)', opacity: '1' },
+              },
+              fadeIn: {
+                '0%': { opacity: '0', transform: 'translateY(10px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+              },
+            },
+          },
+        },
+      };
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+      body {
+        margin: 0;
+        overflow: hidden;
+        background-color: #e0f2fe; /* fallback */
+      }
+      .vinyl-grooves {
+        background: repeating-radial-gradient(
+          #b11226 0, 
+          #b11226 2px, 
+          #8a0d1d 3px, 
+          #8a0d1d 4px
+        );
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "react": "https://esm.sh/react@^19.2.4",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
